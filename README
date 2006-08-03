@@ -1,0 +1,9 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1628
+
+This is similar to the tip I posted previously, except I made a few fixes and made it self-contained as a plugin.
+
+The script contains a function called 'FunctionName()' that returns the name of the function you are currently working in.  This is handy if you got there through a search, or are in a large function or small screen/window and can't see the function's name.  
+
+This on-command (I've seen some that constantly display in the status line) function uses a search pattern to search for a pattern that matches every function declaration I've tried in C, Objective-C, C++, Perl, and Python with the caveat that the function declaration must start on the first character of the line.  I'll fix this one of these days, since Java files will break on that particular point.
+
+
