@@ -20,7 +20,7 @@ fun FunctionName()
     " search backwards for our magic regex that works most of the time
     ?^\s*\w\+\s\+\w\+[\s*|\w*\s*|(]
 
-    "paste the line into a variable to search for control statements
+    "paste the matching line into a variable to display
     let tempstring = getline(".")
 
     " go back to our mark
