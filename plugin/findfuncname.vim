@@ -16,7 +16,7 @@ set cpo&vim
 fun FunctionName()
     " search backwards for our magic regex that works most of the time
     let flags = "bn"
-    let fNum = search('^\w\+.*\n*\s*[(){:]$', flags)
+    let fNum = search('^\w\+.*\n*\s*[(){:]\s*$', flags)
 
     "paste the matching line into a variable to display
     let tempstring = getline(fNum)
