@@ -1,6 +1,6 @@
 " Vim plugin for displaying the name of the function being edited
 " Maintainer: Alex Esplin <alex.esplin@gmail.com>
-" Version: 3.4
+" Version: 3.5
 " Last Change: 2009 Sept 24
 
 "don't load twice, we don't like that...
@@ -15,7 +15,7 @@ set cpo&vim
 fun FunctionName()
     " search backwards for our magic regex that works most of the time
     let flags = "bn"
-    let fNum = search('^\w\+\s\+\w\+.*\n*\s*[(){:]\s*$', flags)
+    let fNum = search('^\w\+\s\+\w\+.*\n*\s*[(){:].*[,)]*\s*$', flags)
     " if we're in a python file, search backwards for the most recent def: or
     " class: declaration
     if match(expand("%:t"), ".py") != -1
