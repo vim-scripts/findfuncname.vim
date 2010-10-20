@@ -1,6 +1,6 @@
 " Vim plugin for displaying the name of the function being edited
 " Maintainer: Alex Esplin <alex.esplin@gmail.com>
-" Version: 3.5
+" Version: 3.6
 " Last Change: 2009 Sept 24
 
 "don't load twice, we don't like that...
@@ -12,7 +12,8 @@ let loaded_findfuncname = 1
 " you really ought to be using :set nocompatible...
 set cpo&vim
 
-fun FunctionName()
+" silently replace if we're already loaded...
+function! FunctionName()
     " search backwards for our magic regex that works most of the time
     let flags = "bn"
     let fNum = search('^\w\+\s\+\w\+.*\n*\s*[(){:].*[,)]*\s*$', flags)
